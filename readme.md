@@ -416,10 +416,8 @@ The final public release should contain:
 
 ## Contact
 
-**Yilan Bai**  
-Kitao Laboratory  
-Graduate School of Life Science and Technology  
-Institute of Science Tokyo
+**Yilan Bai**  bai.y.2355@m.isct.ac.jp
+Kitao Laboratory, Graduate School of Life Science and Technology, Institute of Science Tokyo
 
 For questions about the repository, please use the GitHub **Issues** page or contact the corresponding author listed in the manuscript.
 
