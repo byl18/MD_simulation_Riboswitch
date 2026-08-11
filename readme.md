@@ -88,7 +88,7 @@ flowchart LR
   - **van der Waals contacts:** C16 and C30
 
 <p align="center">
-  <img src="assets/preQ1.png" width="95%" alt="preQ1 riboswitch dissociation pathways and ligand-RNA interactions">
+  <img src="assets/preQ1.pdf" width="95%" alt="preQ1 riboswitch dissociation pathways and ligand-RNA interactions">
 </p>
 
 
@@ -114,7 +114,7 @@ flowchart LR
 - π–π stacking was comparatively rare during SAM-III ligand dissociation.
 
 <p align="center">
-  <img src="assets/SAM-III.png" width="95%" alt="SAM-III riboswitch dissociation pathways and ligand-RNA interactions">
+  <img src="assets/SAM-III.pdf" width="95%" alt="SAM-III riboswitch dissociation pathways and ligand-RNA interactions">
 </p>
 
 
