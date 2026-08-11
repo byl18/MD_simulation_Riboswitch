@@ -1,0 +1,7 @@
+    job_cmd="python3 $WORKSPACE_DIR/programs/mjob-tsubame/submit-job.py"
+    file_extension="qsub"
+    n_parallel=1
+    cmd_mpi=""
+    cmd_serial="gmx_mpi mdrun"
+    cmd_parallel="gmx_mpi mdrun"
+    cmd_gmx="gmx_mpi"

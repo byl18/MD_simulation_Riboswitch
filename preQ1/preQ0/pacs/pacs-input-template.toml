@@ -1,0 +1,40 @@
+## basic
+max_cycle = 200
+
+n_replica = 64
+n_parallel = __N_PARALLEL__
+
+centering = true
+centering_selection = "Target"
+
+working_dir = "__WORKING_DIR__"
+
+
+## simulator
+simulator = "gromacs"
+mdconf = "./pacs.mdp"
+trajectory_extension = ".xtc"
+cmd_mpi      = "__CMD_MPI__"
+cmd_serial   = "__CMD_SERIAL__"
+cmd_parallel = "__CMD_PARALLEL__"
+
+structure  = "./initial_structures/__TRIAL__/6_cmd-1/cmd.whole.gro"
+topology   = "./initial_structures/__TRIAL__/2_md-preparation/gleap.top"
+index_file = "./initial_structures/__TRIAL__/2_md-preparation/gleap.ndx"
+
+
+## analyzer
+type = "dissociation"
+# reference = "../1_modelling/XXX.pdb"
+threshold = 10
+skip_frame = 1
+
+analyzer = "gromacs"
+selection1 = "Backbone"
+selection2 = "Backbone"
+# selection3 = "Backbone"
+# selection4 = "Backbone"
+
+
+## postprocess
+cmd_gmx = "__CMD_GMX__"

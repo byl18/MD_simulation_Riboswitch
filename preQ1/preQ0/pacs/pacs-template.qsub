@@ -1,0 +1,19 @@
+#!/bin/bash
+#$ -cwd
+#$ -l node_q=1
+#$ -l h_rt=24:00:00
+#$ -N PaCS-3
+
+
+module purge
+module load cuda/12.3.2
+module load openmpi/5.0.2-gcc
+module load gromacs/2024.2-plumed
+
+cd ..
+mkdir _job
+
+trial=3
+trial_dir=`printf "trial%03d" "$trial"`
+
+/gs/bs/tga-Kitao-Lab/kijima/programs/anaconda3/envs/pacs/bin/pacs mdrun -f input.toml -t $trial
