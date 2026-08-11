@@ -62,7 +62,6 @@ flowchart LR
 | preQ0-bound          | `3GCA` | preQ0                    | Related precursor ligand |
 | preQ1-bound          | `3Q50` | preQ1                    | Native ligand            |
 
-All three systems contain the same 34-nt preQ1 riboswitch aptamer sequence.
 
 ### SAM-III riboswitch
 
@@ -73,7 +72,7 @@ All three systems contain the same 34-nt preQ1 riboswitch aptamer sequence.
 | SAH-bound   |              `3E5E` | SAH    | Demethylated related ligand |
 | EEM-bound   |              `3E5F` | EEM    | SAM-related analogue        |
 
-> **Note:** the SAM-III apo structure is a ligand-removed model derived from the SAM-bound experimental structure and should not be interpreted as an experimentally determined apo ensemble.
+> **Note:** the SAM-III apo structure is a ligand-removed model derived from the SAM-bound experimental structure.
 
 ## Main Findings
 
@@ -84,7 +83,6 @@ All three systems contain the same 34-nt preQ1 riboswitch aptamer sequence.
 - In 20 independent PaCS-MD trials:
   - **preQ0:** mean dissociation requirement = **52.5 cycles**
   - **preQ1:** mean dissociation requirement = **93.3 cycles**
-  - Mann–Whitney U test: **p = 1.96 × 10⁻⁵**
 - MSM-based estimates of standard binding free energy:
   - **preQ0:** **−26.3 ± 7.4 kJ mol⁻¹**
   - **preQ1:** **−32.8 ± 6.1 kJ mol⁻¹**
@@ -107,10 +105,6 @@ All three systems contain the same 34-nt preQ1 riboswitch aptamer sequence.
   - **SAM:** **47.9 cycles**
   - **SAH:** **36.1 cycles**
   - **EEM:** **39.3 cycles**
-- One-way ANOVA showed an overall difference among the three groups:
-  - **F(2,57) = 5.476**
-  - **p = 0.00668**
-- Tukey HSD identified a significant difference between **SAM and SAH**; SAM–EEM and SAH–EEM were not statistically significant.
 - MSM-based free-energy estimates:
   - **SAM:** **−30.5 ± 7.6 kJ mol⁻¹**
   - **SAH:** **−28.6 ± 15.4 kJ mol⁻¹**
@@ -275,99 +269,6 @@ source .venv/bin/activate
 pip install -r environment/requirements.txt
 ```
 
-### 3. Verify data integrity
-
-For a public release, we recommend providing checksums for large input and trajectory files.
-
-```bash
-sha256sum <trajectory_file.xtc>
-sha256sum <topology_file.tpr>
-```
-
-### 4. Analysis order
-
-The principal analyses should be reproduced in the following order:
-
-```text
-conventional MD
-    │
-    ├── RMSD
-    ├── ligand conformational-state analysis
-    └── RNA PCA
-
-PaCS-MD
-    │
-    ├── cycle-count statistics
-    ├── ligand-RNA distance extraction
-    ├── MSM / PMF reconstruction
-    ├── 3D dissociation-pathway mapping
-    └── ligand-RNA interaction analysis
-```
-
-Each analysis folder should contain a short local `README.md` documenting:
-
-1. required input files,
-2. command or script used,
-3. relevant parameters,
-4. expected outputs, and
-5. mapping between output files and manuscript figures.
-
-
-## Figure-to-Data Mapping
-
-For reproducibility, processed source data for each manuscript figure should be deposited in machine-readable form whenever possible.
-
-| Manuscript result              | Recommended repository location |
-| ------------------------------ | ------------------------------- |
-| Conventional MD RMSD           | `data/rmsd/`                    |
-| preQ1 PCA                      | `data/pca/`                     |
-| PaCS-MD cycle traces           | `data/cycle_counts/`            |
-| MSM implied timescales         | `data/msm/`                     |
-| PMF / ΔG estimates             | `data/pmf/`                     |
-| 3D ligand release trajectories | `data/pathways/`                |
-| H-bond / vdW / π–π data        | `data/interactions/`            |
-| Main manuscript figures        | `figures/main/`                 |
-| Supplementary figures          | `figures/supplementary/`        |
-
-CSV/TSV files are preferred for plotted numerical data because they are lightweight, transparent, and easy to reuse.
-
-
-## Large Trajectory Files
-
-Raw MD and PaCS-MD trajectories can easily exceed normal GitHub repository limits.
-
-A practical archival strategy is:
-
-1. keep **analysis scripts, input parameters, processed data, representative trajectories, and figure-source data** on GitHub;
-2. archive large raw trajectories in a persistent research-data repository such as **Zenodo**;
-3. add the archival DOI to this README and to the manuscript Data Availability Statement.
-
-Example:
-
-```markdown
-Large raw trajectory files are archived at Zenodo:
-https://doi.org/<ZENODO_DOI>
-```
-
-If all trajectory files are stored directly through GitHub infrastructure, use **Git LFS** rather than committing large binary files to normal Git history.
-
-```bash
-git lfs install
-git lfs track "*.xtc"
-git lfs track "*.trr"
-git lfs track "*.tpr"
-git add .gitattributes
-```
-
-## Interpretation Notes
-
-A few methodological points are important when reusing these data:
-
-- **PaCS-MD cycle number is not a direct kinetic constant.** It is used as a comparative retention metric under an identical sampling protocol.
-- **PMF/free-energy values depend on sampling, state definitions, and the chosen reaction coordinate.** Relative trends should therefore be interpreted more strongly than small differences between overlapping uncertainty ranges.
-- **Spatial labels such as “left”, “right”, and “front” are defined relative to the common aligned RNA viewing orientation used for pathway visualization.**
-- Residues identified by interaction analysis are **associated with** pathway preference; causal roles require perturbation, mutation, or experimental validation.
-- The present work focuses primarily on **dissociation**, rather than the complete association/rebinding process.
 
 ## Data Availability
 
