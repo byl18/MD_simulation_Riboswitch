@@ -1,6 +1,3 @@
-<div align="center">
-
-
 # Ligand-Specific Dissociation Pathways of preQ1 and SAM-III Riboswitches
 
 **Simulation data and analysis workflow**
