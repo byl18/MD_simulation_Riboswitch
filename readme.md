@@ -65,8 +65,8 @@ flowchart LR
 | System               | PDB ID | Ligand / PDB ligand code | Purpose                  |
 | -------------------- | -----: | ------------------------ | ------------------------ |
 | Apo preQ1 riboswitch | `6VUH` | —                        | Ligand-free reference    |
-| preQ0-bound          | `3GCA` | preQ0 / `PQ0`            | Related precursor ligand |
-| preQ1-bound          | `3Q50` | preQ1 / `PRF`            | Native ligand            |
+| preQ0-bound          | `3GCA` | preQ0                    | Related precursor ligand |
+| preQ1-bound          | `3Q50` | preQ1                    | Native ligand            |
 
 All three systems contain the same 34-nt preQ1 riboswitch aptamer sequence.
 
@@ -394,25 +394,7 @@ A few methodological points are important when reusing these data:
 
 ## Data Availability
 
-The goal of this repository is to make the computational results underlying the manuscript transparent and reusable.
-
-The final public release should contain:
-
-- simulation starting structures;
-- force-field and topology files required to reconstruct the systems;
-- MD and PaCS-MD input parameters;
-- PaCS-MD progress-coordinate definitions;
-- per-trial cycle-count data;
-- processed coordinates used for pathway analysis;
-- MSM input data and parameter-selection results;
-- PMF/free-energy source data;
-- ligand–RNA interaction data;
-- figure-generation data and analysis scripts;
-- representative trajectories and/or links to the archive containing the complete trajectories.
-
-### Suggested manuscript Data Availability Statement
-
-> **Data Availability.** Simulation input files, analysis scripts, processed data, and figure-source data supporting the findings of this study are publicly available in this GitHub repository. Large raw molecular-dynamics and PaCS-MD trajectory files are available through the archival repository linked here: **[DOI/URL to be added]**.
+Simulation input files, analysis scripts, and figure-source data supporting the findings of this study are publicly available in this GitHub repository. Large raw molecular-dynamics and PaCS-MD trajectory files are available upon reasonable request from the corresponding author.
 
 ## Contact
 
