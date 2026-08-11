@@ -1,3 +1,0 @@
-1, download from PDB
-2, grep ATOM 1_3E5C.pdb > 2_3E5C.pdb and rmeove needless sections
-3, download mol2file from PDB Avogadro and add H & Extensions--Optimize Geometry
