@@ -1,0 +1,3 @@
+1, download from PDB
+2, grep ATOM 1_6VUH.pdb > 2_6VUH.pdb and rmeove needless sections
+
