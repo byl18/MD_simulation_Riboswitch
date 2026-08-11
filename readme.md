@@ -5,7 +5,6 @@
 [![Study](https://img.shields.io/badge/study-RNA--ligand%20dissociation-4B8BBE.svg)](#)
 [![MD](https://img.shields.io/badge/MD-GROMACS-1F6FEB.svg)](#)
 [![Enhanced Sampling](https://img.shields.io/badge/enhanced%20sampling-PaCS--MD-7B2CBF.svg)](#)
-[![Analysis](https://img.shields.io/badge/analysis-MSM%20%7C%20PMF%20%7C%20pathways%20%7C%20contacts-2E8B57.svg)](#)
 
 ## Overview
 
