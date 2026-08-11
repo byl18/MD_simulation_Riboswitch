@@ -1,0 +1,14 @@
+ΔG binding free energies (kJ/mol) for different combinations of n_cluster and lagtime
+================================================================================
+
+       lag=20  lag=40  lag=60  lag=80  lag=100  Mean   Std
+n=20    -8.90   -8.62   -8.08   -7.91      NaN -8.38  0.40
+n=40    -8.26   -7.96   -7.63   -7.16      NaN -7.75  0.41
+n=60    -7.85   -7.57   -7.28   -6.83      NaN -7.38  0.37
+n=80    -7.48   -7.31   -7.17   -6.73      NaN -7.17  0.28
+n=100   -7.40   -7.07   -7.39   -6.98      NaN -7.21  0.19
+Mean    -7.97   -7.71   -7.51   -7.12      NaN -7.58  0.33
+Std      0.55    0.55    0.32    0.42      NaN  0.45  0.09
+
+Overall mean: -7.5782 kJ/mol
+Overall std: 0.5636 kJ/mol
