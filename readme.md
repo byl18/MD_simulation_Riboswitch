@@ -26,27 +26,9 @@ The repository is intended to provide the inputs, processed data, analysis code,
 
 ## Graphical Workflow
 
-```mermaid
-flowchart LR
-    A[PDB structures] --> B[System preparation]
-    B --> C[Energy minimization]
-    C --> D[NVT / NPT]
-    D --> E[MD]
-    D --> F[PaCS-MD]
-
-    E --> G[RMSD / PCA / bound-state interactions]
-    F --> H[20 independent dissociation trials]
-    H --> I[MSM construction]
-    I --> J[PMF and ΔG estimation]
-
-    H --> K[3D pathway mapping]
-    H --> L[Ligand-RNA interaction analysis]
-
-    G --> M[Dynamic ligand discrimination]
-    J --> M
-    K --> M
-    L --> M
-```
+<p align="center">
+  <img src="assets/workflow.jpg" width="95%" alt="workflow">
+</p>
 
 ## Molecular Systems
 
