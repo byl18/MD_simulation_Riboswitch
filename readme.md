@@ -159,8 +159,6 @@ PaCS-MD:
   maximum_cycles: 200
 ```
 
-> PaCS-MD cycle counts are interpreted here as a **comparative measure of ligand retention under the same sampling protocol**. They are not direct experimental dissociation rates (`koff`) or rigorous kinetic constants.
-
 ## MSM and Free-Energy Analysis
 
 Ligand dissociation trajectories were represented primarily using the ligand–RNA distance coordinate and clustered by K-means. MSMs were estimated using reversible maximum likelihood.
