@@ -179,9 +179,6 @@ MSM:
     lag_frames: 40
     lag_time_ps: 20
 
-  diagnostics:
-    - implied_timescales
-
   free_energy:
     observable: PMF
     source: stationary_distribution
