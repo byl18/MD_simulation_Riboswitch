@@ -17,10 +17,6 @@ This repository supports the study:
 
 The project combines conventional all-atom molecular dynamics (MD), **parallel cascade selection molecular dynamics (PaCS-MD)**, Markov state model (MSM)-based free-energy analysis, three-dimensional pathway mapping, and ligand–RNA interaction analysis.
 
-The central question is:
-
-> **How do subtle chemical differences among closely related ligands redistribute local RNA interactions and redirect their preferred dissociation pathways?**
-
 Two structurally distinct riboswitch systems were examined:
 
 - **preQ1 riboswitch:** apo, preQ0-bound, and preQ1-bound states
