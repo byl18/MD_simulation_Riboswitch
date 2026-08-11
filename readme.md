@@ -30,8 +30,6 @@ Two structurally distinct riboswitch systems were examined:
 
 The repository is intended to provide the inputs, processed data, analysis code, trajectory-derived observables, and figure-generation resources needed to reproduce the principal computational results of the manuscript.
 
----
-
 ## Graphical Workflow
 
 ```mermaid
@@ -56,8 +54,6 @@ flowchart LR
     L --> M
 ```
 
----
-
 ## Molecular Systems
 
 ### preQ1 riboswitch
@@ -80,8 +76,6 @@ All three systems contain the same 34-nt preQ1 riboswitch aptamer sequence.
 | EEM-bound   |              `3E5F` | EEM    | SAM-related analogue        |
 
 > **Note:** the SAM-III apo structure is a ligand-removed model derived from the SAM-bound experimental structure and should not be interpreted as an experimentally determined apo ensemble.
-
----
 
 ## Main Findings
 
@@ -107,8 +101,6 @@ All three systems contain the same 34-nt preQ1 riboswitch aptamer sequence.
 
 
 <p align="center"><em>Representative spatial dissociation pathways and interaction features for preQ0 and preQ1.</em></p>
-
----
 
 ### 2. SAM-III riboswitch
 
@@ -140,7 +132,6 @@ All three systems contain the same 34-nt preQ1 riboswitch aptamer sequence.
 
 <p align="center"><em>Representative spatial dissociation behavior and interaction features for SAM, SAH, and EEM.</em></p>
 
----
 
 ## Computational Protocol
 
@@ -162,8 +153,6 @@ The simulations were prepared using an AMBER-based parameterization workflow and
 
 Ligand preparation involved Avogadro, Gaussian/RESP calculations, Antechamber, Parmchk2, and LEaP before conversion to GROMACS-compatible topology files.
 
----
-
 ## PaCS-MD Settings
 
 The progress coordinate used for production PaCS-MD was the **ligand displacement from its initial bound position after fitting the RNA structure**.
@@ -183,8 +172,6 @@ PaCS-MD:
 ```
 
 > PaCS-MD cycle counts are interpreted here as a **comparative measure of ligand retention under the same sampling protocol**. They are not direct experimental dissociation rates (`koff`) or rigorous kinetic constants.
-
----
 
 ## MSM and Free-Energy Analysis
 
@@ -217,7 +204,6 @@ MSM:
 
 The standard-state binding free-energy estimate includes a translational volume correction based on the accessible unbound ligand volume.
 
----
 
 ## Ligand–RNA Interaction Definitions
 
@@ -241,7 +227,6 @@ interaction_definition = {
 
 Interaction counts were normalized by the number of frames within each ligand–RNA distance bin so that contact persistence could be compared as dissociation progressed.
 
----
 
 ## Software Used
 
@@ -329,7 +314,6 @@ Each analysis folder should contain a short local `README.md` documenting:
 4. expected outputs, and
 5. mapping between output files and manuscript figures.
 
----
 
 ## Figure-to-Data Mapping
 
@@ -349,7 +333,6 @@ For reproducibility, processed source data for each manuscript figure should be 
 
 CSV/TSV files are preferred for plotted numerical data because they are lightweight, transparent, and easy to reuse.
 
----
 
 ## Large Trajectory Files
 
@@ -378,8 +361,6 @@ git lfs track "*.tpr"
 git add .gitattributes
 ```
 
----
-
 ## Interpretation Notes
 
 A few methodological points are important when reusing these data:
@@ -390,8 +371,6 @@ A few methodological points are important when reusing these data:
 - Residues identified by interaction analysis are **associated with** pathway preference; causal roles require perturbation, mutation, or experimental validation.
 - The present work focuses primarily on **dissociation**, rather than the complete association/rebinding process.
 
----
-
 ## Data Availability
 
 Simulation input files, analysis scripts, and figure-source data supporting the findings of this study are publicly available in this GitHub repository. Large raw molecular-dynamics and PaCS-MD trajectory files are available upon reasonable request from the corresponding author.
@@ -401,8 +380,6 @@ Simulation input files, analysis scripts, and figure-source data supporting the 
 **Yilan Bai** Graduate School of Life Science and Technology, Institute of Science Tokyo bai.y.2355@m.isct.ac.jp
 
 For questions about the repository, please use the GitHub **Issues** page or contact the corresponding author listed in the manuscript.
-
----
 
 ## Acknowledgments
 
