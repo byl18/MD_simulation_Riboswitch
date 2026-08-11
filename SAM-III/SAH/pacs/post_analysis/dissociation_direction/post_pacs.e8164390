@@ -1,0 +1,37 @@
+Loading gromacs/2026.0
+  Loading requirement: cuda/13.1.1 openmpi/5.0.10-gcc
+                     :-) GROMACS - gmx trjconv, 2026.0 (-:
+
+Executable:   /apps/t4/rhel9/free/gromacs/2026.0/gcc/11.4.1/bin/gmx_mpi
+Data prefix:  /apps/t4/rhel9/free/gromacs/2026.0/gcc/11.4.1
+Working dir:  /gs/bs/tga-KitaoLab-NexusYtec/yilan/projects/SAM/SAH/test_trial/pacs/post_analysis
+Command line:
+  gmx_mpi trjconv -f /gs/bs/tga-KitaoLab-NexusYtec/yilan/projects/SAM/SAH/test_trial/6_cmd-1/cmd5_center.gro -s /gs/bs/tga-KitaoLab-NexusYtec/yilan/projects/SAM/SAH/test_trial/6_cmd-1/cmd5_center.gro -n /gs/bs/tga-KitaoLab-NexusYtec/yilan/projects/SAM/SAH/test_trial/2_md-preparation/gleap.ndx -o dissociation_direction/ref_target.pdb
+
+Will write pdb: Protein data bank file
+Group     0 (         System) has 405093 elements
+Group     1 (          Other) has   198 elements
+Group     2 (             U5) has    28 elements
+Group     3 (             U3) has    31 elements
+Group     4 (            sah) has    46 elements
+Group     5 (             K+) has    72 elements
+Group     6 (            Cl-) has    21 elements
+Group     7 (          Water) has 403268 elements
+Group     8 (            SOL) has 403268 elements
+Group     9 (      non-Water) has  1825 elements
+Group    10 (            RNA) has  1894 elements
+Group    11 (         Target) has  1944 elements
+Group    12 (     NonTargetq) has 403149 elements
+Group    13 (         Center) has     1 elements
+Select a group: Reading frames from gro file 'Generic title t= 200000.00000 step= 100000000', 405093 atoms.
+Reading frame       0 time 200000.000   
+Precision of /gs/bs/tga-KitaoLab-NexusYtec/yilan/projects/SAM/SAH/test_trial/6_cmd-1/cmd5_center.gro is 0.001 (nm)
+
+Back Off! I just backed up dissociation_direction/ref_target.pdb to dissociation_direction/#ref_target.pdb.1#
+Last frame          0 time 200000.000   
+ ->  frame      0 time 200000.000      
+Last written: frame      0 time 200000.000
+
+
+GROMACS reminds you: "I'm not interrupting you, I'm putting our conversation in full-duplex mode." (Antone Roundy)
+
