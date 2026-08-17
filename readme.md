@@ -22,7 +22,6 @@ Two structurally distinct riboswitch systems were examined:
 - **preQ1 riboswitch:** apo, preQ0-bound, and preQ1-bound states
 - **SAM-III riboswitch:** apo, SAM-bound, SAH-bound, and EEM-bound states
 
-The repository is intended to provide the inputs, processed data, analysis code, trajectory-derived observables, and figure-generation resources needed to reproduce the principal computational results of the manuscript.
 
 ## Graphical Workflow
 
@@ -215,32 +214,6 @@ The computational workflow used the following tools:
 > Exact software versions should be recorded in `environment/versions.txt` or an equivalent environment file before archival release.
 
 
-
-## Reproducing the Analysis
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/<YOUR_GITHUB_USERNAME>/<REPOSITORY_NAME>.git
-cd <REPOSITORY_NAME>
-```
-
-### 2. Create the analysis environment
-
-If a Conda environment file is provided:
-
-```bash
-conda env create -f environment/environment.yml
-conda activate riboswitch-pacsmd
-```
-
-or, using `pip`:
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r environment/requirements.txt
-```
 
 
 ## Data Availability
